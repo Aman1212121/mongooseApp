@@ -8,7 +8,7 @@ export const saveInBulk =  async (request,response,next)=>{
       return response.status(200).json({message: "All Category Saved.."});  
    }
    catch(err){
-    console.log(err);
+  
     return response.status(500).json({error: "Internal Server Error"});
     
    }

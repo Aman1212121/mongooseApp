@@ -16,7 +16,7 @@ export const updateProfile=(request,response,next)=>{
         return response.status(200),json({message:"Profile updated successfully"});
         return response.status(401).json({error:"bad request user not found "});
     }).catch(err=>{
-        console.log(err)
+        
         return response.status(500).json({error:"Internal server error "});
     })
 
@@ -31,7 +31,7 @@ export const signIn = async (request, response, next) => {
             : response.status(401).json({ error: "Bad request", message: "Invalid email id" });
     }
     catch (err) {
-        console.log(err);
+       
         return response.status(500).json({ error: "Internal Server Error" });
     }
 }
